@@ -1,0 +1,11 @@
+in:
+  type: mysql
+  host: db
+  user: root
+  password: password
+  database: etl
+  table: bought
+  select: "entrydate, userid, name, seibetsu, age, totalmoney, birthday"
+  where: "seibetsu = 'men'"
+  order_by: "age DESC"
+out: { type: stdout }
